@@ -2,11 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
-
+logs/
 house_venv/
 # C extensions
 *.so
-
+housing/artifact
+saved_models/*
 # Distribution / packaging
 .Python
 build/
