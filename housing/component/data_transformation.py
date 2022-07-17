@@ -1,4 +1,3 @@
-from cgi import test
 from sklearn import preprocessing
 from housing.exception import HousingException
 from housing.logger import logging
