@@ -69,10 +69,11 @@ def render_artifact_dir(req_path):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    try:
-        return render_template('index.html')
-    except Exception as e:
-        return str(e)
+    if request.method == "POST":
+        try:
+            return render_template('index.html')
+        except Exception as e:
+            return str(e)
 
 
 @app.route('/view_experiment_hist', methods=['GET', 'POST'])
@@ -215,4 +216,4 @@ def render_log_dir(req_path):
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='0.0.0.0', port=5000, debug=True)
